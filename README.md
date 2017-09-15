@@ -2,7 +2,7 @@
 ## Abstract
 It has been experimentally observed that real-world networks follow certain topological properties, such as small-world, power-law etc. To study these networks, many random graph models, such as Preferential Attachment, have been proposed.
 We consider the deterministic properties which capture power-law degree distribution and degeneracy. Networks with these properties are known as scale-free networks in the literature. Many interesting problems remain NP-hard on scale-free networks. We study the relationship between scale-free properties and the approximation-ratio of some commonly used evolutionary algorithms.
-For the Vertex Cover, we observe experimentally that the (1+1) EA always gives the better result than a greedy local search, even when it runs for only 2(n log n) steps. We give the construction of a scale-free network in which the (1+1) EA takes more time than greedy algorithm to obtain optimal solution.
+For the Vertex Cover, we observe experimentally that the (1+1) EA always gives the better result than a greedy local search, even when it runs for only 2(n log n) steps. We give the construction of a scale-free network in which the (1+1) EA takes more time than a greedy algorithm to obtain the optimal solution.
 
 ## Algorithms
 
