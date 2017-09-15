@@ -8,7 +8,7 @@ For the Vertex Cover, we observe experimentally that the (1+1) EA always gives t
 
 The (1 + 1)-EA is a search heuristics inspired by the process of natural selection. Typically, it requires as input a population of strings of fixed length n. After an offspring is generated, a mutation factor is introduced, to ensure full objective space exploration. The fitness is then computed, and the less desirable result is discarded.
 
-The cGA is a search heuristic similar to (m + 1)-EA and (m + 1)-GA. This process consists of sampling two individuals with given probability distribution, and swapping them according to the fitness evaluation. At each step, the distribution by which individuals are chosen is updated according to the fitness gain, and proportionally to a parameter K.
+The greedy algorithm is deterministic, and it is specifically designed to find a minimum vertex cover of an input graph. It iteratively adds nodes, which have highest degree to the cover, until all edges are covered.
 
 
 ## Files and folders
