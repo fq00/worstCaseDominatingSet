@@ -14,27 +14,11 @@ The greedy algorithm is deterministic, and it is specifically designed to find a
 ## Files and folders
 The project is organized as follows.
 
-* source = C++ source code for the experiments
-* results = .txt files with results and RStudio postprocesses
-
-The results are organized as follows.
-
-* calibration = parameter calibration experiments
-* variance = posterior noise variance experiments
-* runtime = running time analysis
-* reevaluation = running tine with reevaluation analysis
-
-Each experiments is saved in a separate .txt file. Postprocesses in .R and .pdf files have same name as experiments.
+* experiments = Python files to manage the C++ executable
+* graphExplorer = The C++ source kernel
+* graph = all input graphs for the experiments
+* results = all experimental results, including R postprocess files
 
 ## Conclusions
-We compare empirically the run time behavior of four different bio-inspired search heuristics. Our testbed is the fitness function oneMax, which is a simple unimodal function with posterior noise. All algorithms have local parameters, which influence their run time. We study the dependence of the parameter on the amount of noise and empirically determine for each algorithm the optimal parameter setting depending on the noise. We give statistical predictions for each parameter's asymptotic behavior. 
-
-We are then able to compare the algorithms with optimal parameter settings depending on the level of noise. We observe a strict hierarchy in how well the algorithms can deal with noise. From worst to best this is (m + 1)-EA, (m + 1)-GA, l-MMASib, and cGA.
-
-A common technique to deal with noisy fitness functions is resampling. We therefore also study the optimal number of samples for a given noise level. With optimal resampling we observe improved run times for the (m + 1)-EA and (m + 1)-GA, which scaled least graceful with noise. However, with optimal resampling both of them have exponential run time. We prove that resampling is redundant for any algorithm with quadratic run time, thus showing that cGA and l-MMASib do not benefit from this operator. Therefore, all four algorithms reach run time complexity quadratic in the posterior noise standard deviation. 
-
-Overall, this study shows that resampling is more beneficial than crossover, for algorithms that perform poorly in noisy environments. By far the best scaling behaviour was achieved with EDAs, suggesting that such algorithms can handle noise implicitly. We plan to validate all hereby presented statistical models analytically in the future.
-
-## Acknowledgements
-
-The research leading to these results has received funding from the European Union Seventh Framework Programme (FP7/2007-2013) under grant agreement no.618091 (SAGE) and from the German Science Foundation (DFG) under grant agreement FR 2988 (TOSU).
+We looked at the approximation ratio and run time analysis of single-objective EAs, for well known NP-hard problems on the graphs with deterministic PLB properties, and the power-law exponent β > 2. We analyze the (1+1) EA for the maximum dominating set, maximum vertex cover and connected dominating set problems. We show that the (1+1) EA obtain constant-factor approximation ratio within polynomial run time.
+We observe experimentally that the (1+1) EA always produces better results than the greedy algorithm for the minimum vertex cover problem. We showthat the (1+1) EA gives better approximation ratio than greedy on the Chung-Lu and Hyperbolic model. We observe that on the Hyperbolic model the (1+1) EA reaches better approximation ratio than in the Chung-Lu case. We give a worst case instance with the PLB properties, where greedy algorithm obtain an optimal solution, but the (1+1) EA gives worst possible solution with constant probability. We conclude that the EAs for the above-mentioned problems on the graphs with PLB properties and β > 2, obtain better approximation than the known worst-case approximation. This implies that topological properties of real-world instances play an important role in the performance of EAs.
